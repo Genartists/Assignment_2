@@ -1,0 +1,368 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* For tablets */
+@media (max-width: 768px) {
+    header, .below-header, .content1-wrapper, .content2-wrapper, .cereal-video, footer {
+        padding: 20px;
+    }
+
+    .header-flex, .below-header, .content1-wrapper, .content2-wrapper, .cereal-video, .footer-container {
+        flex-direction: column;
+    }
+
+    .left-box, .right-box {
+        width: 100%;
+    }
+
+    .content-left, .content-right {
+        width: 100%;
+    }
+
+    .nutrition-img-flex {
+        flex-direction: column;
+    }
+}
+
+/* For smartphones */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 50px;
+    }
+
+    .left-wrapper h2, .right-wrapper h2 {
+        font-size: 50px;
+    }
+
+    .button {
+        font-size: 16px;
+    }
+
+    .video-container h2 {
+        font-size: 50px;
+    }
+
+    .media-links a {
+        font-size: 20px;
+    }
+}
+
+
+body {
+    color: #2C2C2C;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+header {
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 30px;
+    position: relative;
+}
+
+header h1 {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-size: 114px;
+}
+
+header h1::after {
+    content: "O";
+    font-size: 50px;
+    color: #ffc720;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.below-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1240px;
+}
+
+.left-box {
+    background-color: #FFCF10;
+    width: 50%;
+    overflow: hidden;
+}
+
+.right-box {
+    background-color: #5BE9B9;
+    width: 50%;
+    overflow: hidden;
+}
+
+.left-wrapper, .right-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.left-wrapper img, .right-wrapper img {
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.left-wrapper h2 {
+    font-size: 100px;
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    position: absolute;
+    top: 30%;
+    color: #FFCF10;
+    -webkit-text-stroke: 4px black;
+    font-style: italic;
+}
+
+.right-wrapper h2 {
+    font-size: 100px;
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    position: absolute;
+    top: 30%;
+    color: #5BE9B9;
+    -webkit-text-stroke: 4px black;
+    font-style: italic;
+}
+
+.button {
+    background-color: #2C2C2C;
+    color: white;
+    padding: 0.6em 1em;
+    border-radius: 0.25em;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    transition: background 0.1s;
+}
+
+.button-right:hover {
+    background-color: #FFCF10;
+    color: #2C2C2C;
+}
+
+.button-left:hover {
+    background-color: #5BE9B9;
+    color: #2C2C2C;
+}
+
+.button-animation {
+    animation-name: tilt-shaking;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    background-color: #FFCF10;
+    color: #1a1d20;
+    position: relative;
+    top: 40px;
+}
+
+@keyframes tilt-shaking {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.certified-container {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+    gap: 7rem;
+}
+
+.certified-text {
+    font-size: 19px;
+    line-height: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 0.8rem;
+}
+
+.content1-wrapper {
+    background-color: #5BE9B9;
+    padding: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content-left {
+    min-width: 40%;
+    max-width: 40%;
+    width: 40%;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #FFCF10;
+}
+
+.content-right {
+    width: 30%;
+    height: 30%;
+    background-color: #5BE9B9;
+}
+
+.content-right img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.content2-wrapper {
+    background-color: #fffef5;
+    padding: 0 100px;
+}
+
+.nutrition-wrapper {
+    position: relative;
+    z-index: 3;
+    border-radius: 14px;
+    background-color: #ffc720;
+}
+
+.nutrition-img-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 100%;
+}
+
+.nutrition-content {
+    width: 100%;
+    padding: 115px 20px 50px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nutrition-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 0.8rem;
+}
+
+.nutrition-image {
+    width: 100%;
+    height: 10%;
+}
+
+.nutrition-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    box-shadow: -10px 0 18px #0000001f;
+}
+
+.cereal-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5BE9B9;
+}
+
+.video-container {
+    background-color: #5BE9B9;
+    margin: 0 auto;
+    padding: 5%;
+    position: relative;
+}
+
+.video-container iframe {
+    border-radius: 15px;
+    border: 3px solid white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    padding: 5%;
+    background-color: #f5f5f5;
+}
+
+.video-container h2 {
+    font-size: 100px;
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.media-links {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.media-links a {
+    font-size: 30px;
+    color: #2C2C2C;
+    transition: .3s ease;
+}
+
+.media-links a:hover {
+    color: #5BE9B9;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 25%;
+    height: auto;
+}
+
+form button:hover {
+    background-color: #5BE9B9;
+    color: #2C2C2C;
+}
+
